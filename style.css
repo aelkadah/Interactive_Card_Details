@@ -154,6 +154,11 @@ body::after {
   color: var(--Verdarviolet);
   font-size: 15px;
 }
+@media (max-width: 991px) {
+  .cardForm label {
+    font-size: 14px;
+  }
+}
 .cardForm input {
   padding: 13px;
   border: 1px solid var(--dark-grayish-violet);
