@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="css/all.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Interactive Card Details</title>
+  </head>
+  <body>
+    <section id="mainSec">
+      <div class="content">
+        <div class="cards">
+          <div class="front">
+            <span id="cardNumber">0000 0000 0000 0000</span>
+            <div>
+              <span id="holderName">Cardholder Name</span>
+              <span id="monthYear">MM/YY</span>
+            </div>
+          </div>
+          <div class="back">
+            <span id="cvcSpan">CVC</span>
+          </div>
+        </div>
+        <div class="info">
+          <form action="javascript:void(0)" class="cardForm">
+            <label class="labelname" for="name"
+              >Cardholder Name<input
+                id="name"
+                type="text"
+                placeholder="e.g. Ahmed ElKadah"
+                name="name"
+            /></label>
+            <p class="alert nameAlert"></p>
+            <label class="labelname" for="number"
+              >Card Number<input
+                id="number"
+                type="text"
+                placeholder="e.g. 1234 5678 9123 0000"
+                name="number"
+                maxlength="16"
+              />
+            </label>
+            <p class="alert cardNumAlert"></p>
+            <div class="mmyy-cvc">
+              <label class="labelmm labelyy" for="mm" for="yy">
+                Exp. Date (MM/YY)
+                <div class="mmyy">
+                  <input
+                    id="mm"
+                    type="text"
+                    placeholder="MM"
+                    name="mm"
+                    class="card-input"
+                    maxlength="2"
+                  />
+                  <input
+                    id="yy"
+                    type="text"
+                    placeholder="YY"
+                    name="yy"
+                    class="card-input"
+                    maxlength="2"
+                  />
+                </div>
+                <p class="alert mmyyAlert"></p>
+              </label>
+              <label class="labelcvc" for="cvc">
+                CVC
+                <input
+                  id="cvc"
+                  type="text"
+                  placeholder="e.g. 123"
+                  name="cvc"
+                  class="card-input"
+                  maxlength="3"
+                />
+                <p class="alert cvcAlert"></p>
+              </label>
+            </div>
+            <button id="submitt" type="submit" class="btn-primary">
+              Confirm
+            </button>
+          </form>
+          <div class="thanks">
+            <img src="imgs/icon-complete.svg" alt="" />
+            <h2>Thank you!</h2>
+            <p>We have added your card details</p>
+            <button id="continue">Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="main.js"></script>
+  </body>
+</html>
