@@ -157,6 +157,7 @@ body::after {
 @media (max-width: 991px) {
   .cardForm label {
     font-size: 13px;
+    color:red;
   }
 }
 .cardForm input {
